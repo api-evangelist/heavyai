@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.nvidia.com/heavyai/apis-and-interfaces
+notes: >-
+  No OpenAPI/securitySchemes are published (HeavyDB exposes an Apache Thrift API,
+  native SQL, and JDBC/ODBC, not a REST/OpenAPI surface), so this profile is
+  grounded in the interface and heavysql documentation rather than derived from a
+  spec.
+summary:
+  types:
+  - username-password
+  - tls
+  transport_encryption: optional-tls
+  oauth2_flows: []
+schemes:
+- name: username-password
+  type: credentials
+  description: >-
+    Clients (heavysql, the Python heavyai client, @heavyai/connector, JDBC/ODBC)
+    authenticate to a HeavyDB server with a username and password against a named
+    database (default database: heavyai). Connection parameters are user, password,
+    host, port (default 6274), and database name.
+  sources:
+  - https://docs.nvidia.com/heavyai/apis-and-interfaces/heavysql
+- name: tls
+  type: transport
+  description: >-
+    Connections can be encrypted by supplying a trusted server certificate
+    (heavysql --ca-cert, or the equivalent client option), and the HTTP transport
+    can be upgraded to HTTPS. TLS is optional and deployment-configured.
+  sources:
+  - https://docs.nvidia.com/heavyai/apis-and-interfaces/heavysql
+enterprise_notes: >-
+  Heavy Immerse (the web application) additionally supports enterprise identity
+  integrations (LDAP / SAML / OAuth-based SSO) in the Enterprise Edition; verify
+  the exact mechanisms against the current security/administration docs before
+  relying on them.
