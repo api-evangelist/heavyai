@@ -1,7 +1,29 @@
 aid: heavyai
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/heavyai.png
 name: HEAVY.AI
-description: 'HEAVY.AI is a company surfaced as a portfolio company of gv and added to the API Evangelist
-  network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  HEAVY.AI is a GPU-accelerated analytics platform (formerly OmniSci / MapD, now
+  part of NVIDIA) built to interactively query and visualize very large, often
+  geospatial and time-series, datasets. It pairs an open-source, GPU-accelerated
+  SQL database (HeavyDB) with a server-side rendering engine (HeavyRender) and a
+  web-based visual analytics application (Heavy Immerse). Developers interact
+  with the platform through native SQL, an Apache Thrift API, JDBC/ODBC drivers,
+  the heavysql command-line console, a Python data-science client (heavyai) and a
+  JavaScript connector (@heavyai/connector), plus a Vega-based rendering API. The
+  documentation is published on the NVIDIA docs site and exposes an llms.txt index
+  and a hosted MCP server for AI agents.
 url: https://raw.githubusercontent.com/api-evangelist/heavyai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,13 +33,74 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Ai
-apis: []
+- Analytics
+- Database
+- GPU
+- SQL
+- Geospatial
+- Data Visualization
+- Data Science
+- Business Intelligence
+apis:
+- name: HEAVY.AI Platform APIs
+  description: >-
+    The developer interfaces to the HEAVY.AI platform: native SQL against the
+    GPU-accelerated HeavyDB engine, an Apache Thrift API, JDBC/ODBC drivers, the
+    heavysql CLI console, a Python client (heavyai) and a JavaScript connector,
+    and the Vega server-side rendering API. HeavyDB is typically self-hosted, so
+    the base endpoint (default port 6274) is deployment-specific.
+  humanURL: https://docs.nvidia.com/heavyai/apis-and-interfaces
+  properties:
+  - type: APIReference
+    url: https://docs.nvidia.com/heavyai/apis-and-interfaces
+  - type: Documentation
+    url: https://docs.nvidia.com/heavyai/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: Website
+  url: https://www.heavy.ai
+- type: DeveloperPortal
+  url: https://docs.nvidia.com/heavyai/
+- type: Documentation
+  url: https://docs.nvidia.com/heavyai/
+- type: APIReference
+  url: https://docs.nvidia.com/heavyai/apis-and-interfaces
+- type: GettingStarted
+  url: https://docs.nvidia.com/heavyai/overview
+- type: GitHubOrganization
+  url: https://github.com/heavyai
+- type: ChangeLog
+  url: https://docs.nvidia.com/heavyai/release-notes
+- type: ChangeLog
+  url: changelog/heavyai-changelog.yml
+- type: LLMsTxt
+  url: llms/heavyai-llms.txt
+- type: MCPServer
+  url: mcp/heavyai-mcp.yml
+- type: Packages
+  url: packages/heavyai-packages.yml
+- type: SDKs
+  url: packages/heavyai-packages.yml
+- type: CLI
+  url: cli/heavyai-cli.yml
+- type: Authentication
+  url: authentication/heavyai-authentication.yml
+- type: Lifecycle
+  url: lifecycle/heavyai-lifecycle.yml
+- type: WellKnown
+  url: well-known/heavyai-well-known.yml
+- type: DomainSecurity
+  url: security/heavyai-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

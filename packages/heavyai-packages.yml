@@ -1,0 +1,65 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/heavyai
+notes: >-
+  First-party HEAVY.AI client libraries and drivers. The Python (heavyai) and
+  JavaScript (@heavyai/connector) clients were verified directly on their public
+  registries (PyPI / npm registry JSON); both are published from the github.com/heavyai
+  organization under Apache-2.0. JDBC and ODBC drivers are documented first-party
+  interfaces distributed with the platform / release downloads rather than a public
+  package registry, so they are recorded from the docs.
+packages:
+- language: python
+  registry: pypi
+  name: heavyai
+  url: https://pypi.org/project/heavyai/
+  install: pip install heavyai
+  version: '1.3'
+  license: Apache-2.0
+  source: https://github.com/heavyai/heavyai
+  official: true
+  description: >-
+    Python data-science client for HeavyDB (successor to pymapd/pyomnisci);
+    DBAPI + Apache Arrow support with CPU/GPU dataframe results. Also on
+    conda-forge (conda install -c conda-forge heavyai).
+- language: javascript
+  registry: npm
+  name: '@heavyai/connector'
+  url: https://www.npmjs.com/package/@heavyai/connector
+  install: npm install @heavyai/connector
+  version: 7.0.0
+  license: Apache-2.0
+  source: https://github.com/heavyai/heavyai-connector
+  official: true
+  description: JavaScript/TypeScript connector to HeavyDB (Thrift over HTTP/HTTPS).
+- language: java
+  registry: docs
+  name: HeavyDB JDBC driver
+  url: https://docs.nvidia.com/heavyai/apis-and-interfaces/jdbc
+  official: true
+  description: >-
+    First-party JDBC driver for HeavyDB, distributed with the platform install;
+    also usable from RJDBC and SQL clients such as SQuirreL SQL.
+- language: c
+  registry: docs
+  name: HeavyDB ODBC driver
+  url: https://docs.nvidia.com/heavyai/apis-and-interfaces/odbc
+  official: true
+  description: First-party ODBC driver for HeavyDB (enterprise edition).
+- language: javascript
+  registry: github
+  name: heavyai-crossfilter
+  url: https://github.com/heavyai/heavyai-crossfilter
+  official: true
+  source: https://github.com/heavyai/heavyai-crossfilter
+  description: >-
+    Browser library for exploring large multivariate datasets against HeavyDB
+    (part of the Immerse charting stack). Distributed from GitHub (not on a
+    public scoped npm package as of this pass).
+- language: javascript
+  registry: github
+  name: heavyai-charting
+  url: https://github.com/heavyai/heavyai-charting
+  official: true
+  source: https://github.com/heavyai/heavyai-charting
+  description: Dimensional charting library (d3.js + crossfilter) for HeavyDB.

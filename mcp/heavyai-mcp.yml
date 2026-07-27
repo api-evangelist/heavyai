@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://docs.nvidia.com/heavyai/llms.txt
+notes: >-
+  HEAVY.AI publishes a hosted, remote MCP server for its documentation (built on
+  Fern's docs MCP server). It exposes the documentation corpus to AI clients such
+  as Claude Code and Cursor; it is a docs-retrieval MCP server, not a
+  database/query control-plane MCP server. Verified via a live JSON-RPC
+  initialize handshake: serverInfo.name = "fern-docs-mcp-server", version 1.0.0,
+  protocolVersion 2024-11-05, tools capability advertised (listChanged: true).
+server:
+  name: heavyai-docs
+  transport: http
+  url: https://docs.nvidia.com/heavyai/_mcp/server
+  protocol_version: '2024-11-05'
+  server_info:
+    name: fern-docs-mcp-server
+    version: '1.0.0'
+  capabilities:
+    tools:
+      listChanged: true
+tools: []

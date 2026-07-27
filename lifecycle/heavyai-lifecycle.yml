@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.nvidia.com/heavyai/release-notes
+versioning:
+  scheme: semver
+  current: 9.0.3
+  docs: https://docs.nvidia.com/heavyai/release-notes
+  notes: >-
+    HEAVY.AI is versioned as installable platform software (HeavyDB / HeavyRender /
+    Heavy Immerse) rather than a hosted, dated API. Releases follow MAJOR.MINOR.PATCH;
+    the 9.x line is current, with 8.x releases still supported.
+deprecation:
+  policy_url: https://docs.nvidia.com/heavyai/troubleshooting-and-special-topics/archived-release-notes
+  notes: >-
+    No formal HTTP Sunset/Deprecation-header policy applies (this is self-hosted
+    database software, not a hosted REST API). End-of-support is expressed through
+    the "Currently Supported Releases" list on the release-notes page; releases no
+    longer supported move to Archived Release Notes with links to their historical
+    documentation. Upgrade guidance recommends backing up data and testing new
+    releases before production deployment.
+  sunset_header: false
+sla:
+  url: null
+  notes: >-
+    No public uptime SLA — the platform is customer-deployed (on-prem / customer
+    cloud), so availability is a function of the operator's deployment.
+status_page: null
+status_page_notes: >-
+  No public hosted status page located; because HeavyDB is self-hosted there is no
+  shared multi-tenant availability surface to report.

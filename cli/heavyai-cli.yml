@@ -1,0 +1,50 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.nvidia.com/heavyai/apis-and-interfaces/heavysql
+cli:
+  name: heavysql
+  summary: >-
+    heavysql is the client-side SQL console (successor to omnisql/mapdql) that
+    submits SQL statements to a HeavyDB server and displays results. It ships with
+    the HEAVY.AI platform install rather than a standalone package registry.
+  syntax: heavysql [<database>] [<options>]
+  default_database: heavyai
+  default_port: 6274
+  transports:
+  - binary (default)
+  - http (--http)
+  - https (--https, with --ca-cert for TLS)
+  auth:
+    user_flag: -u / --user
+    password_flag: -p / --passwd
+    tls: --ca-cert <path-to-trusted-server-certificate>
+  key_options:
+  - flag: --db
+    description: Database name to connect to (default heavyai).
+  - flag: -u / --user
+    description: Username to authenticate as.
+  - flag: -p / --passwd
+    description: Password.
+  - flag: --port
+    description: Server port (default 6274).
+  - flag: --http
+    description: Use HTTP transport.
+  - flag: --https
+    description: Use HTTPS transport.
+  - flag: --ca-cert
+    description: Path to trusted server certificate; initiates an encrypted connection.
+  - flag: -d / --delimiter
+    description: Field delimiter in row output (default '|').
+  - flag: -n / --no-header
+    description: Do not print query result header.
+  - flag: -q / --quiet
+    description: Do not print result-set metadata.
+  - flag: -a / --echo-all
+    description: When reading input from a file, print all executed commands and queries.
+  related_clients:
+  - name: heavyai (Python)
+    kind: library
+    url: https://pypi.org/project/heavyai/
+  - name: '@heavyai/connector (JavaScript)'
+    kind: library
+    url: https://www.npmjs.com/package/@heavyai/connector

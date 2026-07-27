@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+notes: >-
+  Probed the standard /.well-known/ discovery surface on the HEAVY.AI hosts. The
+  documentation host (docs.nvidia.com) returns 404 for all probed paths; the
+  marketing host (www.heavy.ai / heavy.ai) is fronted by a CDN/WAF that refused
+  automated TLS connections during this pass (recorded as unreachable, status 000).
+  No well-known discovery documents were found. Absence is expected: HEAVY.AI is
+  self-hosted database software with no hosted OAuth/OIDC authorization server.
+hosts:
+- host: https://docs.nvidia.com/heavyai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://www.heavy.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    note: TLS handshake refused by CDN/WAF (unreachable from automated probe)
+  - path: /.well-known/openid-configuration
+    status: 0
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+  - path: /.well-known/api-catalog
+    status: 0
+  - path: /.well-known/ai-plugin.json
+    status: 0

@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.nvidia.com/heavyai/release-notes
+scheme: semver
+current_version: 9.0.3
+notes: >-
+  HEAVY.AI publishes dated release notes covering currently-supported releases,
+  grouped by platform component (HeavyDB / HeavyRender / HeavyImmerse / HeavyConnect).
+  Older releases are moved to an Archived Release Notes page. Entries below are the
+  recent window captured from the release-notes page; see the source for full detail
+  and the per-release breakdown of new features vs. fixed issues.
+supported_releases:
+- 9.0.3
+- 9.0.2
+- 9.0.1
+- 9.0.0
+- 8.5.2
+- 8.5.1
+- 8.5.0
+- 8.4.0
+archived_release_notes: https://docs.nvidia.com/heavyai/troubleshooting-and-special-topics/archived-release-notes
+entries:
+- version: 9.0.3
+  breaking: false
+  highlights:
+  - 'HeavyRender: fixed fatal error rendering Contour Chart (regression since GDAL 3.10 upgrade)'
+  - 'HeavyImmerse: upgraded application to Node 24.11.0'
+  - 'HeavyImmerse: fixed SQL Editor regression where a syntax error caused an endless loader'
+  - 'HeavyImmerse: removed PostHog, Pendo, and Intercom event tracking'
+  - 'HeavyImmerse: patched a vulnerability in the "debug" webserver dependency'
+- version: 9.0.2
+  breaking: false
+  highlights:
+  - 'HeavyRender: improved logging for intermittent multi-GPU Vulkan errors'
+- version: 9.0.0
+  breaking: false
+  highlights:
+  - Major release; baseline for the currently-supported 9.x line
